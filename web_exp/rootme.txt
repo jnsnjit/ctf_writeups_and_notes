@@ -1,0 +1,45 @@
+challenge on tryhackme
+requires linux machine, gobuster, nmap, and reverse shell script
+
+the process:
+step 1: browsing...
+
+created vpn for linux env
+now on same network as target machine
+test connectivity with server, can ping it
+ok i want to figure out a little more abt the machine
+use nmap command to find open ports and basically public info on the 
+other machine
+nmap __.__.__.__ -vv (be verbose)
+
+ports 22(ssh) and 80(http) are open
+ok.. lets try using this ports to talk to machine
+tried ssh, but requires pw for communication
+tried common passes but no luck
+ok, opened a browser to see the http stuff,
+theres a webpage that is teasing me to root to the machine
+ok, from what I know from prev experiences, there can be other indexes on 
+the page, so using a tool like gobuster to check is a good idea
+ok lowkey took me a bit to understand how to use the tool, 
+but after like twenty minutes of youtube review
+syntax
+
+gobuster dir _______
+import commands
+-u (link to target url) NEED
+-w (used wordlist that it will dig with) NEED
+-v (be verbose with errors)
+-q (quiet, not too sure how it works)
+
+ok so I ran
+gobuster dir -u http:/_______ -w ______/common.txt
+
+now after checking results...
+in short, like eight paths found
+some are forbidden / 403
+index.php HTTP200
+uploads css js panel all 301 (redirection)
+
+
+
+
