@@ -40,6 +40,18 @@ some are forbidden / 403
 index.php HTTP200
 uploads css js panel all 301 (redirection)
 
+ok checked out all the directory paths, those of interest are
+panel and uploads,
+panel is a page that displays all uploads, and uploads allows the user to upload a file
+ok I tried upload an image, worked fine 
+was told to use a php reverse, php will be able to ask for stuff from the shell, so the goal
+is to use it to gain access to the web server through my machine
+using reverse shell code i found online...
+used pentestmonkey tool, changed my nessacary values in the code
 
+website is displaying that php is not allowed... hrmmm prob reading the extension and saying no.
+ok, trying phtml file ext instead of php (basically php+html) and this works
+for shell to work, in my terminal I need a tcp listener, syntax goes as follows
 
-
+nc -v -n -l -p ____   (port num)
+ok I got to stop for now, will cont.
