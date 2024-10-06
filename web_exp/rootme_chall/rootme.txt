@@ -55,3 +55,4 @@ for shell to work, in my terminal I need a tcp listener, syntax goes as follows
 
 nc -v -n -l -p ____   (port num)
 ok I got to stop for now, will cont.
+adding photos for extra notes
