@@ -1,0 +1,42 @@
+# DID NOT SOLVE #
+
+lololol i sucked this ctf literally got nothing 💀
+anyways I at least want to write down what i do 
+
+ok so for this challenge we are given a pcapng file, challenge goes as following:
+lady lends her computer to a friend, she downloads something with a p2p windows protocal (FTP,SMFP...?)
+not long after that though, one of her important docs on her computer goes missing
+just at first glance, lots of packets captured, roughly twenty thousand.
+
+first thing I would change about my approach is instead of jumping straight in with a tool like wireshark, I learned
+about this tool, called networkminer, which does a lot of the brute work first, like identify devices communicating,
+their address+MAC's, and any potential weird stuff on the network.           USE NETWORKINGMINER
+
+one thing to note abt this tool is that the free version does not deal with pcapng files, so in wireshark i had to export
+the file as a pcap in order to convert it, I do not know to much on how this effects the information in the capture, 
+but something to keep in mind.
+
+additionally, one thing that someone else noticed that I didn't was how many packets the host machine was sending out
+it was like a crazy amount. the networkminer tool showed that but I did not immediatly catch that, noting this done for 
+next time bc it actually build a lot of the story of the flag 
+
+i also was not about to find the packets refering scapy lib (python tool for packet manipulation), look out for that
+ONE COOL SEARCH ITEM IN WIRESHARK...
+data    (feel a little silly, but it shows any ascii values being sent in packets 🔥)
+
+OH ONE THING I JUST THOUGHT ABT, in some of the packets I saw extraction of in xml format, guess what certain document 
+types like docx use to format....    XML! damn wish i was thinking like this 24 hours ago
+
+that was abt as far I got in this chall, spent roughly 5+ hours with no result but I learned a decent amount so win win
+I want to return to this one later in the week to see if i can make some more progess, either with looking at a writeup or not.
+
+
+
+I did attempt to do a few other challenges, but nothing of result really came out of them.
+github challenge (doxxed) was pretty interesting, I felt like i was on the right path / even close to the flag but i just
+couldnt find the commit 
+learned: forks of repos can be deleted, but fork history is maintained for the owner of the fork
+what i did: found the public forked repo, then the original repo (notevilcorp/tools), and did a lot sniffing with the
+network activity in the insights section, and a bunch of other stuff, but to no avail.
+
+feel like i should write more but eh im tired long weekend :C
