@@ -1,4 +1,4 @@
-## what is active directory? ##
+# what is active directory? #
 
 is some type of technology (some adminstrator machine maybe), that has access to all objs like:
 
@@ -21,26 +21,36 @@ user  👍   AD   👍   proper resources     (think of zero trust infrasture!)(
      <---       <---
 
 some obj types in AD:
-<Forest><Domain><Organizational_Unit><User><Group><Contact><Computer><Shared_Folder><Printer><Site><Subnet>
+<Forest>
+<Domain>
+<Organizational_Unit>
+<User>
+<Group>
+<Contact>
+<Computer>
+<Shared_Folder>
+<Printer>
+<Site>
+<Subnet>
 
 just like OOP programming, classes define objects, user object must have certain attributes
 
 container obj: {user, group,...}
 leaf obj:      printer1,printer2
 
-Security Prinicipal Object: objects that can be authenticated and assigned [permissions]
+Security Prinicipal Object: objects that can be authenticated and assigned permissions
 must have a GUID and SID
 - 128 bit Globally Unique Identifier
 - Security Indentifier 
 
-# Forest #
+### Forest ###
 highest level obj
-objects can ONLY comminucate within a forest [unless_trusted]
+objects can ONLY comminucate within a forest unless trusted
 
-# Trees #
+### Trees ###
 level below a forest       (think abt tree architecture)
 
-# Domain #
+### Domain ###
 logical grouping of objects, step below a tree, no limit of number of objects in domain
 do NOT need to be in the same physical location \
 
