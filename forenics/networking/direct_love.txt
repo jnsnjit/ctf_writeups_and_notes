@@ -40,3 +40,74 @@ what i did: found the public forked repo, then the original repo (notevilcorp/to
 network activity in the insights section, and a bunch of other stuff, but to no avail.
 
 feel like i should write more but eh im tired long weekend :C
+
+ok returning back bc I want to a write for at least the direct love flag, i know only like 8 teams solved it but hopefully
+a write is out there (like 4 days after event)
+
+
+DIRECT_LOVE - TCP1P CTF2024:
+
+extract exe from direct connect protocol
+decompile and analyze the c2 server python exe
+Decrypt icmp traffic and analyze the command use by threat actor
+extract pdf encrypted from direct connect protocol
+decrypt the encrypted pdf
+
+ok this what they be saying 💀
+was right about the python with scapy lib, but missed to extract the exe from the direct connect protocol 
+will now attempt to do 
+
+ok number 1: how to extract a executiable/traffic from a pcap!
+two easy ways:
+1: file export (nah bc exe file, dont want that potentially running on device)
+2:right click, follow tcp stream
+
+ok lets go
+$To: TunangannyaChizuru1 From: C2uru1 $<C2uru1> Hello this is me, the one messaged you yesterday|
+$To: C2uru1 From: TunangannyaChizuru1 $<TunangannyaChizuru1> Hi|
+$To: C2uru1 From: TunangannyaChizuru1 \$<TunangannyaChizuru1>  Did i pass the interview?|
+$To: TunangannyaChizuru1 From: C2uru1 $<C2uru1> Yea, congratulation :D. |
+$To: TunangannyaChizuru1 From: C2uru1 $<C2uru1>  please download the contract in my shared file|
+$To: TunangannyaChizuru1 From: C2uru1 $<C2uru1> by the way, you need to enter the key i gave you yesterday|
+$To: TunangannyaChizuru1 From: C2uru1 $<C2uru1> and you can wait for a while after the key is submitted|
+$To: C2uru1 From: TunangannyaChizuru1 $<TunangannyaChizuru1> okay|
+
+ONE NOTE (ALL THIS TRAFFIC TAKES PLACE MUCH LONGER AFTER STREAM STARTING)
+packets 16000 something
+
+$ConnectToMe C2uru1 192.168.56.101:49775|||||||||||||$MyINFO $ALL TunangannyaChizuru1 
+<++ V:0.881,M:A,H:0/0/1,S:3>$ $0.005.$$6016738$|$MyINFO $ALL TunangannyaChizuru1 
+<++ V:0.881,M:A,H:0/0/1,S:3>$ $0.005A$$6016738$|||||||
+
+$ConnectToMe C2uru1 192.168.56.101:49775|
+$ConnectToMe TunangannyaChizuru1 192.168.56.1:62406|
+
+full convo, interesting stuff but not really following yet
+THIS IS THE DIRECT CONNECT STUFF (|$ used as delimeters in this protocol)
+
+cool side note but not related to challenge, in wireshark tools, there is one called credidentals, it checks
+encrypted traffic for potential username/password credidental listing
+
+one thing to think abt with ipv6 is address sharing (multicasting)
+i see llmnr protocols call (again not related to this answer but via poisoning these packets, 
+malicous users can infect and share ip with affected user)
+
+Transporting downloads and connecting to the hub requires TCP, while active searches use UDP.
+
+There are two kinds of modes a user can be in: either "active" or "passive" mode. 
+Clients using active mode can download from anyone else on the network, while clients using passive mode 
+users can only download from active users. In NeoModus Direct Connect, passive mode users receive other 
+\passive mode users' search results, but the user will not be able to download anything. 
+In DC++, users will not receive those search results. In NeoModus Direct Connect, all users will 
+be sent at most five search results per query. If a user has searched, DC++ will respond with ten search 
+results when the user is in active mode and five when the user is in passive mode. Passive clients will 
+\be sent search results through the hub, while active clients will receive the results directly.
+
+from wiki page of DC protocol
+okay now I 100% understand what had went down in this traffic captured, it is just a matter of extracting and finding
+what was taken and how
+
+BOOM I FOUND IT HEHEHEHEHEHE!
+ok starting from line 85, follow tcp stream which is for the exe file that was first originally downloaded
+
+ok next step
