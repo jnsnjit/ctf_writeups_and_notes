@@ -109,5 +109,22 @@ what was taken and how
 
 BOOM I FOUND IT HEHEHEHEHEHE!
 ok starting from line 85, follow tcp stream which is for the exe file that was first originally downloaded
+wait idk
 
-ok next step
+
+OK TWO SIDE NOTES:
+1: i literally can not find a more verbose writeup for direct love, which kind of sucks but still interested in learning more
+2: found the solution for the github flag, its actually a pretty big vulr with github that allows users to find deleted
+private repositories as long as you have the commit flag
+so even though you are just given a partial flag, I saw a writeup where someone wrote a python script to bruteforce the link
+which lead to the deleted repo (CRAZYYYYY)
+link to video: https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github
+image of logic also attached, think about about like java
+reference to object may be removed but, it actually reassigned, and is accessiable to children below
+## reason WHY BRUTEFORCE can be used is that git protocol permits the use of short SHA-1 values in the hyberlink to repo
+so instead of bforcing the whole sha1 flag, the user only needs like 8 chars for the link to be found
+i believe the minimun chars guess is like 5 to avoid collisons, but to be safe I would go with like 7/8 chars
+
+results: well this is openly admitted in githubs policies, which I actually saw when I was learning more during the 
+ctf, but the issues is more that people/companies view the public/private and think that is the only important 
+aspect of the repositories, but the archiceture of git allow for this to be exploited.
