@@ -61,8 +61,11 @@ do NOT need to be in the same physical location \
 domain controller + dns (thinking)
 
 nmap -Pn (what is this flag, look up later) (Pn means no PINGING) (meant to be secretive)
+
 __LDAP__ - keeps track of all objects | list
+
 __Kerbosos__ - grants ticket/auth which gives permission
+
 (*kerbrute*): https://github.com/ropnop/kerbrute
 
 
