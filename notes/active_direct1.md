@@ -21,17 +21,17 @@ user  👍   AD   👍   proper resources     (think of zero trust infrasture!)(
      <---       <---
 
 some obj types in AD:
-<Forest>
-<Domain>
-<Organizational_Unit>
-<User>
-<Group>
-<Contact>
-<Computer>
-<Shared_Folder>
-<Printer>
-<Site>
-<Subnet>
+- Forest
+- Domain
+- Organizational_Unit
+- User
+- Group
+- Contact
+- Computer
+- Shared_Folder
+- Printer
+- Site
+- Subnet
 
 just like OOP programming, classes define objects, user object must have certain attributes
 
