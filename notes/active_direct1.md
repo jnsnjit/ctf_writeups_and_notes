@@ -54,4 +54,24 @@ level below a forest       (think abt tree architecture)
 logical grouping of objects, step below a tree, no limit of number of objects in domain
 do NOT need to be in the same physical location \
 
-<Domain_Controller> = responsible for all authentications, authorizations, additions, deletions, edits, and modifications inside its domain; //AKA supreme control of its area
+### Domain_Controller ###
+ responsible for all authentications, authorizations, additions, deletions, edits, and modifications inside its domain; //AKA supreme control of its area
+
+## NICC Meeting ##
+domain controller + dns (thinking)
+
+nmap -Pn (what is this flag, look up later) (Pn means no PINGING) (meant to be secretive)
+LDAP - keeps track of all objects | list
+Kerbosos - grants ticket/auth which gives permission
+(kerbrute): https://github.com/ropnop/kerbrute
+
+
+nmap -sS -O scanme.nmap.org/24
+
+Launches a stealth SYN scan against each machine that is up out of the 256 IPs on the /24 sized network where Scanme resides. It also tries to determine what operating system is running on each host that is up and running. This requires root privileges because of the SYN scan and OS detection.
+
+crackmapexec (network cracking tool)
+smb (think about shared file systems in windows directory, cool to know) - u - p
+
+njit gives windows server (didnt know that)
+tryhackme
