@@ -127,3 +127,34 @@ i believe the minimun chars guess is like 5 to avoid collisons, but to be safe I
 results: well this is openly admitted in githubs policies, which I actually saw when I was learning more during the 
 ctf, but the issues is more that people/companies view the public/private and think that is the only important 
 aspect of the repositories, but the archiceture of git allow for this to be exploited.
+
+
+
+heres a better explained version of the github issue in my own words:
+the actual name of this problem is: Cross Fork Object Reference
+two main situations
+
+ONE
+1. i fork a repo
+2. i add my own info to it (maybe some private info like my own api key to stuff)
+3. i then delete my fork
+this can still be accessed via the main branch as long as I know the commit hash, which I only really need to 
+know the first like 7-8 digits, which can be bruteforced with something like a python script
+TWO
+1. i have a public repository
+2. user makes a fork of repo
+3. i commit to my repo, but I dont sync it with the other existing forked repos(maybe priv info abt company, industry secrets)
+4. i then delete my repo
+
+user is able to access those commits too as long as they can figure out the beginning of the commit hash (SHA-1)the issue with the second one is that as long as AT SOME POINT, one person made a fork of a repository, the all other repositories in that stream/network will exist through that fork even if they all get deleted..
+heres a situation where this is bad:
+
+You create a private repo that will eventually be made public.You create a private, internal version of 
+that repo (via forking) and commit additional code for features that you’re not going to make public. You make 
+your “upstream” repository public and keep your fork private.
+if i then make a fork of the public one, i can then see the history of the private repo from when you initially 
+made it to until you make the upstream public i cant see after its made public bc basically they get split 
+(pub/priv), but lets say in your internal version again you are using private company info, that is now considered 
+accessible.
+
+the take away for people like us is more of case1: just be careful when forking public repos not to add private information

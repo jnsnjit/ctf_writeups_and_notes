@@ -61,3 +61,7 @@ answer to number 10
 
 GOING TO LEAVE OFF HERE FOR TONIGHT, WILL CONTINUE TMR! 💯💯
 ill add some images next time too..
+
+ok coming back to the challenge now, first thing i thought to check today was not one of the question but the local policies set on the computer:
+
+answer to that: nothing. even though in the past it was 
