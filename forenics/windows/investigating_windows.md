@@ -60,3 +60,4 @@ answer to number 10
 **03/02/2019**
 
 GOING TO LEAVE OFF HERE FOR TONIGHT, WILL CONTINUE TMR! 💯💯
+ill add some images next time too..
