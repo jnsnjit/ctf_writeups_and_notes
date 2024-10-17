@@ -30,8 +30,8 @@ net user (name:John)         gives base info about user obj, including last logo
 recall windows server database 2016, think it is part of some domain (AD)
 probable address is the domain controller.
 not netstat sigh 🤧
+damn this one silly i am coming back to this question later
 
-damn this one silly i am coming back to this question later <br>
 5. what two accounts have administrator priv: <br>
 WOAH, found this issue right here, guest acc (domain guest), has admin priv, defo not right
 **Jenny, Guest**
