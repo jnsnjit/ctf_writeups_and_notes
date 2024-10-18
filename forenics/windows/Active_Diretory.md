@@ -7,3 +7,9 @@ __Learning Material:__ https://learn.microsoft.com/en-us/training/modules/introd
 - [ ] bananas
 - [ ] peanuts
 
+| Item |Cost|Stock|
+|------|----|-----|
+|Apples|9.99|  3  |
+|------|----|-----|
+|Grapes|6.99|  5  |
+|------|----|-----|
