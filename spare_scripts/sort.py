@@ -1,6 +1,6 @@
-infile = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\exploits\deadface_prox_info_rq.txt"
-outfile = path = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\exploits\out.txt"
-correctfile = path = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\exploits\correct.txt"
+infile = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\spare_scripts\deadface_prox_info_rq.txt"
+outfile = path = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\spare_scripts\out.txt"
+correctfile = path = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\spare_scripts\correct.txt"
 import re
 
 def write_input_to_output(input_file, output_file):

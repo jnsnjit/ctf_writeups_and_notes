@@ -1,4 +1,4 @@
-infile = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\exploits\correct.txt"
+infile = r"C:\Users\Jimmy Silva\ctf_writes\ctf_writeups_and_notes\spare_scripts\correct.txt"
 
 def record_frequency(inputf):
     try:
