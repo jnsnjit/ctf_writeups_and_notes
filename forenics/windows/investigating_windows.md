@@ -65,3 +65,21 @@ ill add some images next time too..
 ok coming back to the challenge now, first thing i thought to check today was not one of the question but the local policies set on the computer:
 
 answer to that: nothing. even though in the past it was 
+
+returning back to chall, first thing i did was look at computer directory, saw this TMP folder in the c drive, opened it, and it contains a lot of information to this backdoor that has been created on the computer
+
+11. what tool was used to get windows passwords? <br>
+minikatz, found this out in temp folder, lots of more info in it
+
+12.
+13.
+14. what was last opened port <br>
+check windows firewall, last opened port for connection was tcp 1337
+apparently a frequently used tcp port for backdoor connections (chosen port)   1024+
+windows firewall --> monitoring --> firewall --> check recent actions
+
+15. check for dns poisoning, what site was targeted? <br>
+lol guessed it was google, was right.
+
+ugh almost done with this chall, but wrapping up for the night 
+
