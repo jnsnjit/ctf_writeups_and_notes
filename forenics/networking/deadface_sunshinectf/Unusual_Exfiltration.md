@@ -34,4 +34,4 @@ after the ctf, one of my teammates, ben, found the qr thing, and makes a TON of 
 
 now i actually just tried to read the qr, and if I had access to the text instead of the image, I would convert the hex (51 52 51 52 51 52) in to black and white boxes to make the eyes of the qr code more readable, and then I would probably be able to read the flag <br>
 
-[[![alt text](betterqr.png)]]
+![alt text](betterqr.png)
