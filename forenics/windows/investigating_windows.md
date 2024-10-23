@@ -6,7 +6,8 @@ cool that tryhackme has this all integrated into there website for free!
 ok machine is booted up...
 lots of initial questions such as
 1. year and version of machine <br>
-ok using search functionality, opened about section in windows, some info on the machine:
+using search functionality, opened about section in windows, some info on the machine:
+also can be found in powershell --> Get-LocalUser
 - windows server 2016 database
 - version 1607
 - os build: 14393.2791
@@ -79,7 +80,15 @@ apparently a frequently used tcp port for backdoor connections (chosen port)   1
 windows firewall --> monitoring --> firewall --> check recent actions
 
 15. check for dns poisoning, what site was targeted? <br>
-lol guessed it was google, was right.
+found how to do online! <br>
+goes in file manager:
+local disk --> windows --> system32 --> drivers --> etc
+in there, open host file, check for changed dns ip address, for example, on my computer I have docker, so in my host sections docker has added certain ips to my dns table
 
-ugh almost done with this chall, but wrapping up for the night 
+ugh almost done with this chall, but wrapping up for the night <br>
+alr lets wrap this up frfr ong
+
+* something of note *
+in reg, go to:
+hkey_local_machine>software>microsoft>windows>currentversion>run (like looking at startup tasks)
 
