@@ -30,8 +30,8 @@ so, I exported the important packets in capture, and made these filtering python
 frequency = alphabet correspondence (26+2 for brackets)
 32QR -> one ascii symbol --> string by the end --> first and last RRRRRRRRR = nothing/filler
 
-after the comp, one of my teammates, ben, found the qr thing, and makes a TON of sense
+after the ctf, one of my teammates, ben, found the qr thing, and makes a TON of sense (goated for that)
 
-now i actually just tried to read the qr, and if I had access to the text instead of the image, I would convert the hex (51 52 51 52 51 52) in to black and white boxes to make the eyes of the qr code more readable, and then I would probably be able to read the flag
+now i actually just tried to read the qr, and if I had access to the text instead of the image, I would convert the hex (51 52 51 52 51 52) in to black and white boxes to make the eyes of the qr code more readable, and then I would probably be able to read the flag <br>
 
-
+[[![alt text](betterqr.png)]]
