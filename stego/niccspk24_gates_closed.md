@@ -10,7 +10,7 @@ what i did:
 3. after compiling in ghidra, looking at main function, nothing important
 4. checking other function, (secret function name?)
     - puts function: strout<br>
-<br>![alt text](the_gate_is_closedp2.png)<br>
+<br> ![alt text](the_gate_is_closedp2.png) <br>
 5. text appears to be Base64, the equal sign is a pretty sure giveaway
 TklDQ3s0X1IzNGxfRmw0Z30=<br>
 6. convert to text with cyberchef, get flag
