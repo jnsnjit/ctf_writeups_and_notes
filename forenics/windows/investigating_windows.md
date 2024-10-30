@@ -92,3 +92,15 @@ alr lets wrap this up frfr ong
 in reg, go to:
 hkey_local_machine>software>microsoft>windows>currentversion>run (like looking at startup tasks)
 
+
+
+
+## notes on LSASS ##
+place in windows where passwords stored, like linux shadow folder
+uses a pretty insecure hash encryption, and tools exist to break it
+
+pypykatz lsa minidump file.DMP        NTLM hash (windows 10) (assymt key)
+                                      vs Kerberatos (2 way ssymt key)
+
+
+
