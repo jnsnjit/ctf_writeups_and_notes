@@ -1,0 +1,19 @@
+## threats and vulnerabilities ##
+
+__Threat:__ ANYTHING that can cause harm, loss, damage, or compromise a system or technology. <br>
+- natural disasters
+- cyber-attacks
+- data integrity breaches
+- disclosure of confidential information
+- critical vulnerabilities
+__Vulnerabilities:__ ANY weakness in a systems design or implementation. <br>
+- known software bugs
+- misconfigured software
+- improperly protected network devices
+- missing security patches
+- lack of physical security
+
+*threats and vulnerabilites in combination is what makes something a security risk!*
+
+__RISK MANAGEMENT__
+finding different ways to minimize the likelihood of an outcome occuring and achieving the desired outcomes

@@ -17,5 +17,8 @@ def space_tab(inp):
             print(morse_code)
     except Exception as e:
             print(f"An error occurred: {e}")
+def to_Upper(string):
+    goods = string.upper()
+    print(goods)
 
-space_tab(input_file)
+to_Upper("Guaranteeing that a specific action or event has taken place and cant be denied by parties involved.")
