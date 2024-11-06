@@ -8,7 +8,8 @@ place to store my thought process for both successful and non successful ctfs in
 ### __recent CTFs:__ ###
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-SPOOKYCTF   = challenge writeups | misc | steg | forensics | bin  |
+          THIRD PLACE UNDERGRADUATE NJIT TEAM! 🔥🔥🔥
+SPOOKYCTF   = challenge writeups | misc | steg | forensics | bin  |  
 ___________________________________________________________________
 D34DFACE + SUNSHINECTF = challenge writeups |  sql  |  forensics  |
 ___________________________________________________________________
