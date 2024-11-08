@@ -8,9 +8,10 @@ place to store my thought process for both successful and non successful ctfs in
 ### __recent CTFs:__ ###
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-SPOOKYCTF   = challenge writeups | misc | steg | forensics | bin  |
+          THIRD PLACE UNDERGRADUATE NJIT TEAM! 🔥🔥🔥 <br>
+SPOOKYCTF   = challenge writeups | misc | steg | forensics | bin  |  <br>
 ___________________________________________________________________
-D34DFACE + SUNSHINECTF = challenge writeups |  sql  |  forensics  |
+D34DFACE + SUNSHINECTF = challenge writeups |  sql  |  forensics  | <br>
 ___________________________________________________________________
-TCP/IP   = no solves :C | challenges = directlove, github forensics
+TCP/IP   = no solves :C | challenges = directlove, github forensics <br>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
