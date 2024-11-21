@@ -60,5 +60,48 @@ __./netcom__    leave terminal open, new term <br>
 __ps aux | grep netcom__      note that pid of this is later then pid of simple, makes sense. <br>
 ![alt text](..lir2.png)
 
-__sudo lsof -P -n__
-taking break here for now.
+__sudo lsof -P -n__<br>
+lsof --> list open files
+-i --> shows info about network connections (sockets and open netfiles)
+-P --> display port numbers
+-n --> shows IP addresses instead of hostname
+going to use a tool called osquery, good for exploring network and processes.
+
+__osqueryi__
+this is basically a querying tool in terminal, COOL!<br>
+__SELECT pid,fd,socket,local_adress,remote_address FROM process_open_sockets WHERE pid = 2016;
+![alt text](..lir3.png)
+
+things to take note with processes in linux:
+- a process running from a tmp directory
+- a suspicious child-parent process 
+- process with weird network connection
+- orphan process with no parents associated 
+- suspicious processes that are running through a cronjob (like task scheduler in windows)
+- system-related process or binaries running from the tmp directory.
+
+changed query to see some more info <br>
+SELECT * FROM process_open_sockets WHERE pid = 2016;
+
+5. persistance...
+__def: the idea of mantaining access to a compromised system after an initial break-in.\
+
+creating example...
+sudo useradd attacker -G sudo
+sudo passwd attacker
+
+echo "attacker ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers
+
+looking for logs in linux <br>
+__/var/log/__    (ubuntu)
+
+passwords are stored in /etc/shadow/ file, requires root, are encrypted. <br>
+
+cronjob is unix's version of task scheluder, allows for time based job scheluding. <br>
+
+another thing that help with "persistance" is services, check ur services! <br>
+
+__sudo nano /etc/systemd/system/suspicious.service__ <br>
+creates config file in system folder.
+
+stopping here for today... <br>
