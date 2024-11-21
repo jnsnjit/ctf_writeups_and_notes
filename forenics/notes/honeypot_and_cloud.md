@@ -7,4 +7,10 @@
 ssh-keygen
 saved in honeypot file + create password for file
 pubkey: ________ dont mind, rather not share even though its pub not priv
+temp root pass:  rootpass
 
+
+wazuh install:<br>
+installation guide
+alt installs
+quickstart
