@@ -24,3 +24,6 @@ study material-->
 3. utilize sec+ comptia knowledge FIRST
 4. understand the concepts the question is asking
 5. vendor neutral, know tools, but not exactly how to use the tool
+
+if I ever want to buy a course again ->
+diontraining.com/udemy
