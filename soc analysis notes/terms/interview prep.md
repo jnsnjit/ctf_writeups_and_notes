@@ -17,4 +17,8 @@ Hashs - one way encryption used to identify data. Examples include:
 
 VirusTotal - tool that be used to identify malicious hash signitures, multiple tools like this exist, important that they remain constantly update. How antivirus also works and detection malicious files on a system. <br>
 
-__Fast Flux__ - new term i just learned. basically the use of botnets/comprimised machines to serve the domain name and IP for an attacker to create there payloads, instead of being from one known IP address, bypass easy detection from automated systems.
+__Fast Flux__ - new term i just learned. basically the use of botnets/comprimised machines to serve the domain name and IP for an attacker to create there payloads, instead of being from one known IP address, bypass easy detection from automated systems. <br>
+
+__c2 / C&C__ - command and control center, how advance persistant threats and hacking groups collect and relay data from compromised computers/ <br>
+
+__UKC and Mitre Framework__: know the difference, UKC is a new security framework made in 2017, and is still continuously updated. <br>
