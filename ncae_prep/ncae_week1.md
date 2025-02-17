@@ -26,7 +26,7 @@ config file --> nano /etc/vsftp.conf <br>
 
 look in chroot (jailing for new logins) <br>
 for ftp, there is a location where ftp must be accepted, make sure this is defined, and that ftp permissions do not exist outside the directory that it should not be in. <br>
-### Extra Notes: ###
+## Extra Notes: ##
 __ncae notes: the basics!__<br>
 
 172.20._.2/16 - network    (- = team number)
