@@ -46,3 +46,11 @@ __has its own commands, here are some ones you should know:__ <br>
 w - see who is logged in on the machine
 
 killall -u _username_ (remove a user from a machine) <br>
+
+__rule of thumb when messing around with a service:__
+want to configure a service! heres some general rules of thumb
+1. does this have one/multiple config files
+2. can you just plug and play new configs
+3. before making customizations, make a backup to create fault tolerance and you dont just bring down the service
+4. do a systemctl restart of the service, if you dont, mostly likely changes will not be initially implemented
+5. track changes to configuration of important system files (network config, ...)
