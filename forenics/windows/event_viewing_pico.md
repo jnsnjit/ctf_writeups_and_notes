@@ -45,3 +45,5 @@ and with that --> last part of the flag, t00l_81ba3fe9} <br>
 #### lessons learned! ####
 - event ID's are powerful tools, this capture had almost 9000 events, and most of them are created by the SAM and AD so have filters to sort 
 - context is a even MORE powerful tool. Knowing information like it was an installed program from the internet, not through lets say a link, or that it was persistant on start was crucial pieces of info that helped to filter through all of the bloat events.
+
+flag: picoCTF{Ev3nt_vi3wv3r_1s_a_pr3tty_us3ful_t00l_81ba3fe9}
