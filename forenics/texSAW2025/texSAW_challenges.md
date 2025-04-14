@@ -25,7 +25,7 @@ xxd prettyflower.png
 none of these turned any results, so i continue to try some other tools, like zsteg and stegonline to look for embed files within the photo, but due to the actual png being already pretty small in size, i wasnt expecting much.
 
 finally i came to looking at the actually image itself, looking for any potential embed watermarks, and after messing around with stegonline rgb filter tools, I found the flag!
-![img](texSAW_chall_prettyflower.png)
+![img](texSAW_chall_prettyflower1.png)
 
 flag: texSAW{Ringmaster}
 ### freaky flower ###
