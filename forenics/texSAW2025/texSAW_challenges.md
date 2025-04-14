@@ -2,11 +2,11 @@
 not much time for this ctf this weekend, but knocked out a few challenges in forensics so ill do a recap!
 
 ### favorite flower ###
-**Category**: forensics (obscurification, steganography, analysis)
-**Difficulty**: easy
-**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline)
-**Date**: 4/11/25
-**Attachments**: ![img](prettyflower.png)
+**Category**: forensics (obscurification, steganography, analysis) <br>
+**Difficulty**: easy <br>
+**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: ![img](prettyflower.png) <br>
 
 _analysis_ <br>
 
@@ -29,11 +29,11 @@ finally i came to looking at the actually image itself, looking for any potentia
 
 flag: texSAW{Ringmaster}
 ### freaky flower ###
-**Category**: forensics (obscurification, steganography, analysis)
-**Difficulty**: easy
-**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline)
-**Date**: 4/11/25
-**Attachments**: chal2.psd
+**Category**: forensics (obscurification, steganography, analysis) <br>
+**Difficulty**: easy <br>
+**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: chal2.psd <br>
 
 _analysis_ <br>
 
@@ -52,11 +52,11 @@ flag is found within the metadata of the file, pretty easy chall!
 flag: texSAW{sneaky_sunflowers_sure_suck}
 
 ### scrambled packets ###
-**Category**: forensics (packet analysis, obscurification, steganography, protocols)
-**Difficulty**: medium
-**Tools**: wireshark, tcpdump, notepad, ?!NETWORK_MINER!? (could potentially write a code script if more information was needed to be parsed)
-**Date**: 4/11/25
-**Attachments**: cap.pcap
+**Category**: forensics (packet analysis, obscurification, steganography, protocols) <br>
+**Difficulty**: medium <br>
+**Tools**: wireshark, tcpdump, notepad, ?!NETWORK_MINER!? (could potentially write a code script if more information was needed to be parsed) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: cap.pcap <br>
 
 _analysis_ <br>
 
