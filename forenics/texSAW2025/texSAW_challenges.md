@@ -67,7 +67,7 @@ step 1: starting with the unencrypted protocols <br>
 after a first glance, there is a lot of both ICMP and HTTP traffic, so I went to take a look at them first, starting with icmp because its more irregular to be sending like 70 icmp requests within the span of a short period of time. (also didnt mention before, but theres only two computers involved in traffic in this capture) <br>
 
 heres a sample packet:<br>
-![img](texSAW_chall_scatteredpack1.png)<br>
+![img](TexSAW_chall_scatteredpack1.png)<br>
 
 looking at this, there is a lot to gather from, but ill briefly explain the thought process:
 - all of the ICMP requests/replys send data within them at the end of the packet
