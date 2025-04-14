@@ -18,7 +18,7 @@ first goal, find installed program.<br>
 event ID's to look for: 11707, 4697    <br>
 
 boom part one --> first event ID for 11707 is an install for "Totally Legit Software", and after looking at some of the events around this point, there is...<br>
-[filename](picoeventchall1.png)
+![img](picoeventchall1.png)
 
 in the xml data of the event, there is this oddly sus info in the data segment, looks like base64 encoded, type to pull out the good ole cyberchef<br>
 yup! ---> picoCTF{Ev3nt_vi3wv3r_ <br>
@@ -31,7 +31,7 @@ lets try looking for modified registry keys for a potential service connected to
 
 okay silly idiot update, event ID i really needed to look was 4657 (registry modification), and BAM, we have found the next part of the flag!<br>
 p2 --> 1s_a_pr3tty_us3ful_<br>
-[filename](picoeventchall2.png)
+![img](picoeventchall2.png)
 
 okay so at this point, persistent for this program is now established on startup, time figure out what commands are happening that are causing the computer to shutdown...
 new value in reg that it was assigned is this new executable... custom_shutdown.exe, yeah TOTALLY legit. lets see where this takes up. <br>
@@ -39,7 +39,7 @@ new value in reg that it was assigned is this new executable... custom_shutdown.
 simple idea, look for machine shutdown event!   eventid=1074 <br>
 
 and with that --> last part of the flag, t00l_81ba3fe9} <br>
-[filename](picoeventchall3.png)
+![img](picoeventchall3.png)
 
 
 #### lessons learned! ####

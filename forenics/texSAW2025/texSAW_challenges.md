@@ -6,7 +6,7 @@ not much time for this ctf this weekend, but knocked out a few challenges in for
 **Difficulty**: easy
 **Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline)
 **Date**: 4/11/25
-**Attachments**: [img](prettyflower.png)
+**Attachments**: ![img](prettyflower.png)
 
 _analysis_ <br>
 
@@ -25,7 +25,7 @@ xxd prettyflower.png
 none of these turned any results, so i continue to try some other tools, like zsteg and stegonline to look for embed files within the photo, but due to the actual png being already pretty small in size, i wasnt expecting much.
 
 finally i came to looking at the actually image itself, looking for any potential embed watermarks, and after messing around with stegonline rgb filter tools, I found the flag!
-[img](texSAW_chall_prettyflower.png)
+![img](texSAW_chall_prettyflower.png)
 
 flag: texSAW{Ringmaster}
 ### freaky flower ###
@@ -48,7 +48,7 @@ after checking, next up is a quick look at the metadata of the file, which inclu
 exiftool prettyflower.png
 ```
 flag is found within the metadata of the file, pretty easy chall!
-[img](texSAW_chall_chal2psd.png)
+![img](texSAW_chall_chal2psd.png)
 flag: texSAW{sneaky_sunflowers_sure_suck}
 
 ### scrambled packets ###
@@ -67,7 +67,7 @@ step 1: starting with the unencrypted protocols <br>
 after a first glance, there is a lot of both ICMP and HTTP traffic, so I went to take a look at them first, starting with icmp because its more irregular to be sending like 70 icmp requests within the span of a short period of time. (also didnt mention before, but theres only two computers involved in traffic in this capture) <br>
 
 heres a sample packet:<br>
-[img](texSAW_chall_scatteredpack1.png)<br>
+![img](texSAW_chall_scatteredpack1.png)<br>
 
 looking at this, there is a lot to gather from, but ill briefly explain the thought process:
 - all of the ICMP requests/replys send data within them at the end of the packet
