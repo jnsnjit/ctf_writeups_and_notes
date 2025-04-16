@@ -2,11 +2,11 @@
 not much time for this ctf this weekend, but knocked out a few challenges in forensics so ill do a recap!
 
 ### favorite flower ###
-**Category**: forensics (obscurification, steganography, analysis)
-**Difficulty**: easy
-**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline)
-**Date**: 4/11/25
-**Attachments**: ![img](prettyflower.png)
+**Category**: forensics (obscurification, steganography, analysis) <br>
+**Difficulty**: easy <br>
+**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: ![img](prettyflower.png) <br>
 
 _analysis_ <br>
 
@@ -25,15 +25,15 @@ xxd prettyflower.png
 none of these turned any results, so i continue to try some other tools, like zsteg and stegonline to look for embed files within the photo, but due to the actual png being already pretty small in size, i wasnt expecting much.
 
 finally i came to looking at the actually image itself, looking for any potential embed watermarks, and after messing around with stegonline rgb filter tools, I found the flag!
-![img](texSAW_chall_prettyflower.png)
+![img](texSAW_chall_prettyflower1.png)
 
 flag: texSAW{Ringmaster}
 ### freaky flower ###
-**Category**: forensics (obscurification, steganography, analysis)
-**Difficulty**: easy
-**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline)
-**Date**: 4/11/25
-**Attachments**: chal2.psd
+**Category**: forensics (obscurification, steganography, analysis) <br>
+**Difficulty**: easy <br>
+**Tools**: linux cmd (exiftool, binwalk, file, steghide, xxd, strings, zteg, stegonline) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: chal2.psd <br>
 
 _analysis_ <br>
 
@@ -52,11 +52,11 @@ flag is found within the metadata of the file, pretty easy chall!
 flag: texSAW{sneaky_sunflowers_sure_suck}
 
 ### scrambled packets ###
-**Category**: forensics (packet analysis, obscurification, steganography, protocols)
-**Difficulty**: medium
-**Tools**: wireshark, tcpdump, notepad, ?!NETWORK_MINER!? (could potentially write a code script if more information was needed to be parsed)
-**Date**: 4/11/25
-**Attachments**: cap.pcap
+**Category**: forensics (packet analysis, obscurification, steganography, protocols) <br>
+**Difficulty**: medium <br>
+**Tools**: wireshark, tcpdump, notepad, ?!NETWORK_MINER!? (could potentially write a code script if more information was needed to be parsed) <br>
+**Date**: 4/11/25 <br>
+**Attachments**: cap.pcap <br>
 
 _analysis_ <br>
 
@@ -67,7 +67,7 @@ step 1: starting with the unencrypted protocols <br>
 after a first glance, there is a lot of both ICMP and HTTP traffic, so I went to take a look at them first, starting with icmp because its more irregular to be sending like 70 icmp requests within the span of a short period of time. (also didnt mention before, but theres only two computers involved in traffic in this capture) <br>
 
 heres a sample packet:<br>
-![img](texSAW_chall_scatteredpack1.png)<br>
+![img](TexSAW_chall_scatteredpack1.png)<br>
 
 looking at this, there is a lot to gather from, but ill briefly explain the thought process:
 - all of the ICMP requests/replys send data within them at the end of the packet

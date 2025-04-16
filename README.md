@@ -1,14 +1,21 @@
 # ctf_writeups_and_notes #
-place to store my thought process for both successful and non successful ctfs instead of my computer's notepad <br>
+vault for successful ctfs writeups and overall cyber notes <br>
 
 ### __short term projects:__ ###
-* NCAE Prep
-* Active Directory
-* HoneyPots?
+* SIEM Pipeline
+* Summer Homelab
+* SpringForward Challenges
 ### __recent CTFs:__ ###
-
+JerseyCTF, texSAW, NCAE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-          THIRD PLACE UNDERGRADUATE NJIT TEAM! 🔥🔥🔥 <br>
+FIRST PLACE IN PERSON! 🔥🔥🔥 <br>
+JERSEYCTF = challenge writeups | misc | steg | forensics |  <br>
+___________________________________________________________________
+texSAWCTF = |  forensics  | <br>
+___________________________________________________________________
+NCAE! --> fun! (7/12th place) <br>
+___________________________________________________________________
+THIRD PLACE UNDERGRADUATE NJIT TEAM! 🔥🔥🔥 <br>
 SPOOKYCTF   = challenge writeups | misc | steg | forensics | bin  |  <br>
 ___________________________________________________________________
 D34DFACE + SUNSHINECTF = challenge writeups |  sql  |  forensics  | <br>
