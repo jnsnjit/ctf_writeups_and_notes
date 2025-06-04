@@ -6,8 +6,17 @@ if im not commiting to this repo everyday, just know that I am slacking <br>
 
 cert info:
 intermediate level certification (2-4 years industry experience, prior certs like network or security+ recommended)
-tests on the users able to capture, monitor, and respond to network traffic findings.
+tests on the users able to capture, monitor, and respond to network traffic findings. as well as understanding on software + app security, automation, threat hunting, and IT regulatory compliance.
 
+test framework: <br>
+- 33% --> Security Operations
+- 30% --> Vulnerability Management
+- 20% --> Incident Response Management
+- 17% --> Reporting and Communication
+
+75-85 questions overall (3-5 simulation questions) <br>
+score to pass: 750/900, same as security+
+165 minute exam
 _resources used to study:_
 
 udemy jason dion course (can NOT recommend there material enough, they really helped me study and prepare for my security+ cert)
