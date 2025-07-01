@@ -6,8 +6,10 @@ vault for successful ctfs writeups and overall cyber notes <br>
 * Summer Homelab
 * SpringForward Challenges
 ### __recent CTFs:__ ###
-JerseyCTF, texSAW, NCAE
+Industrial Intrustion Tryhackme, JerseyCTF, texSAW, NCAE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+TryHackMeII25 = two forensics challenge :P, solo ctfing <br>
+___________________________________________________________________
 FIRST PLACE IN PERSON! 🔥🔥🔥 <br>
 JERSEYCTF = challenge writeups | misc | steg | forensics |  <br>
 ___________________________________________________________________
