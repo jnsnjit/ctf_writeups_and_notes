@@ -39,6 +39,15 @@ certain functions:
 - _strftime_ + _strptime_ --> functions that format time into supplied format.     ( strftime takes epoch to string,      strptime takes string to epoch)
 - _span_ --> groups time in supplied time buckets
 
+Format Variables for strftime and strptime: <br>
+        __TIME__                        __DAYS__                            __Months+Years__
+* %H - 24 hours    00 - 23          %d - dayofmth       01 - 31         %b - abrmon     Jan
+* %T - 24 hours    HMS              %w - weekday        0 to 6          %B - mthname    January
+* %I - 12 hours    01 - 12          %a - abrwkday       Sun...          %m - mthnum     01 - 12
+* %M - minute      00 - 59          %A - weekday        Sunday          %Y - year       2020
+* %p              AM or PM          %F - ymd            %Y-%m-%d
+
+
 ### Using Time Commands ###
 more time functions!<br>
 
@@ -55,5 +64,5 @@ to determine your time zone:
 2. run a search over the last 15 minutes
 3. read event timestamps and verify that with your local time. 
 
-
+![splunk time quiz](images/image-5.png)
 
