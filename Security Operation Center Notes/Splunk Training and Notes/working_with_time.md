@@ -43,4 +43,17 @@ certain functions:
 more time functions!<br>
 
 * _timechart_ --> performs statistical aggregations against time, good with count or sum functions
+* _timewrap_ --> works in sync with timechart to have each time section split into their own charts
+
 ex:     timechart <stats-funct>(field) by (field) \[span=<int><timescale>\] \[limit=<int>\] <br>
+
+### Working with Time Zones ###
+dealing with time zones can be tricky! <br>
+* always verify when using time as a metric that it is what is expected for you endpoint display
+to determine your time zone:
+1. in _preferences_, set Time Zone to default system timezone.
+2. run a search over the last 15 minutes
+3. read event timestamps and verify that with your local time. 
+
+
+
