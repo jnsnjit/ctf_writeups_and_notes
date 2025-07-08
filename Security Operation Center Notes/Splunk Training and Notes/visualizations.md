@@ -35,3 +35,4 @@ additional formatting:
 - Format: wrap results, show row numbers, data overlay, totals, percentage ... 
 - Chart Overlay: allows visualizations to overlayed and mixed together.
 
+![Visualization Quiz Results](images/image-8.png)
