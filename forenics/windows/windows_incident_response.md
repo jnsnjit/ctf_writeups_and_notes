@@ -38,3 +38,11 @@ multiple __red flags__ in the macro:
 - utilize certutil, a legit windows cmd line tool for managing and creating certificate authorities... nice stealth option!
 
 ### Task 4: Containment, Eradication, and Recovery ###
+_containment:_ this thing is already partically contained, as efforts to isolate it from the rest of the network has stopped any potential spread of this incident. time to remove this guy!
+
+_Eradication:_
+1. Stop process in task manager
+2. remove persistance in registry keys 
+3. remove malware files in temp directory
+4. remove malicious invoice file
+5. clear browser history
