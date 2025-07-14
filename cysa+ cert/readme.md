@@ -25,3 +25,8 @@ more to be added ... <br>
 what I recommond before taking this cert: ... <br>
 
 summer cert 1 of 2 loading...  :yum:
+
+## I PASSED THIS B ##
+bro i did SO good! <br>
+
+practical experience in the field really helped bring up my score, like the PBQ's went really well, lots of questions on SIEM technology, windows and linux troubleshooting, which I was able to knock ou the park. <br>
