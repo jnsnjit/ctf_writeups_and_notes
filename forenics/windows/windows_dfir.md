@@ -70,52 +70,96 @@ when an adversary gains access to a new system, an option that can take is creat
 2. Check Local Groups:
 - __``Get-LocalGroup | ForEach-Object { $members = Get-LocalGroupMember -Group $_.Name; if ($members) { Write-Output "`nGroup: $($_.Name)"; $members | ForEach-Object { Write-Output "`tMember: $($_.Name)" } } } | tee gp-members.txt``__
 
-Group: Administrators 
-	Member: CCTL-WS-018-B21\Administrator 
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Adminstrator
-
-Group: Backup Operators
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Adminstrator
-
-Group: Device Owners
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Adminstrator
-	Member: CCTL-WS-018-B21\Guest
-
-Group: Event Log Readers
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-
-Group: Guests
-	Member: CCTL-WS-018-B21\Guest
-
-Group: IIS_IUSRS
-	Member: NT AUTHORITY\IUSR
-
-Group: Network Configuration Operators
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-
-Group: Power Users
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Guest
-
-Group: Remote Desktop Users
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Adminstrator
-	Member: CCTL-WS-018-B21\Guest
-
-Group: Remote Management Users
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\Adminstrator
-	Member: CCTL-WS-018-B21\Guest
-
-Group: System Managed Accounts Group
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: CCTL-WS-018-B21\DefaultAccount
-
-Group: Users
-	Member: CCTL-WS-018-B21\ADMIN-SRV
-	Member: NT AUTHORITY\Authenticated Users
-	Member: NT AUTHORITY\INTERACTIVE
+Group: Administrators <br>
+	Member: CCTL-WS-018-B21\Administrator <br>
+	Member: CCTL-WS-018-B21\ADMIN-SRV <br>
+	Member: CCTL-WS-018-B21\Adminstrator <br>
+...
 <br>
+
+__Q: What is the total number of suspicious accounts?:__ 3 (Guest, Adminstrator, Administrator)<br>
+
+``Get-LocalUser -Name Adminstrator | select * | tee guest_info.txt``<br
+__Q: What is the security Identifier / SID of the Guest Account?:__ S-1-5-21-1966530601-3185510712-10604624-501 <br>
+__Q: When was the last time the Adminstrator (purposely misspelled) account was logged on?:__ 2/28/2024 10:21:10 AM <br>
+
+### Understanding Network Scope ###
+adversaries not only like to move laternally across a network, but also like to establish C2 connections through beaconing and consistent outbound traffic. Analysing network activity is important! <br>
+
+```Get-NetTCPConnection | select Local*, Remote*, State, OwningProcess,` @{n="ProcName";e={(Get-Process -Id $_.OwningProcess).ProcessName}},` @{n="ProcPath";e={(Get-Process -Id $_.OwningProcess).Path}} | sort State | ft -Auto | tee tcp-conn.txt```
+or tbh to just use netstat like ... !<br>
+`TCP    10.10.224.74:49678     silver-pvt:ssh         CLOSE_WAIT`
+`TCP    10.10.224.74:49705     silver-pvt:ssh         CLOSE_WAIT`
+
+#### Network Shares ###
+--> folders and drives that are shared across the network (think SMB! + Eternal Blue), adversaries LOVE to utilize protocols like this to plant malicious stagers through a network, either as an attack on availiblity (Ransomware), or utilize to potentially compromise a user/service account with higher privileges. <br>
+`` Get-CimInstance -Class Win32_Share | tee net-shares.txt ``
+
+#### Firewall Access ####
+looking at the firewall also reveal a butt ton of information, especially regarding with the attempt to exfiltrate information outside a machine to a remote destination. <br>
+`` Get-NetFirewallProfile | ft Name, Enabled, DefaultInboundAction, DefaultOutboundAction | tee fw-profiles.txt ``
+
+Name | Enabled | DefaultInboundAction | DefaultOutboundAction <br>
+---------------------------------------------------------- <br>
+Domain    False        NotConfigured         NotConfigured <br>
+Private   False        NotConfigured         NotConfigured <br>
+Public    False        NotConfigured         NotConfigured <br>
+
+all good here ... <br>
+
+### Startup Persistance and Registry Keys ###
+being able to ensure persistence is on of the most crucial steps for adversaries to take in order to continue malicious activities over long periods of time! <br>
+
+Sysinternals Autoruns!!! == great for finding out registry key information regarding to persistence like start on boot ... etc. <br>
+
+<br><br>
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit
+   C:\Windows\system32\userinit.exe
+     C:\Windows\system32\userinit.exe
+     Userinit Logon Application
+     Microsoft Corporation
+     10.0.17763.1
+     c:\windows\system32\userinit.exe
+     12/31/1958 2:49 PM
+     MD5:      BF8825D08BC235F0609CA8BBEF4E179C
+     SHA1:     470C3E60F9B2B6D83F95C7916A5361E34DEC3471
+     PESHA1:   DF688108336B5E2AC79D652521CAE6F14BC4D450
+     SHA256:   1FE7F7C59EC7EAA276739FA85F7DDA6136D81184E0AEB385B6AC9FEAAA8C4394
+     PESHA256: A5160EF5F4B97E938DA7E956A3331FB66EA3F9EA7E7D8BEEF313F318F2C11B98
+     IMPHASH:  8419D97ABDFEB6C320F0C39028647572
+   cmd.exe
+     cmd.exe
+     Windows Command Processor
+     Microsoft Corporation
+     10.0.17763.1697
+     c:\windows\system32\cmd.exe
+     5/30/2008 3:32 AM
+     MD5:      911D039E71583A07320B32BDE22F8E22
+     SHA1:     DED8FD7F36417F66EB6ADA10E0C0D7C0022986E9
+     PESHA1:   8F4C943F540AB1BFD6DD2A2820FA9EE7794CE550
+     SHA256:   BC866CFCDDA37E24DC2634DC282C7A0E6F55209DA17A8FA105B07414C0E7C527
+     PESHA256: 5F98D08805D4EEE36337C81914F0D82191A4D58D24EA2FF2E522A95A5D6E5B73
+     IMPHASH:  272245E2988E1E430500B852C4FB5E18
+<br>
+
+`` Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NetSh" | tee netsh-records.txt `` 
+some unusual properties with this guy ... <br>
+
+__Q: What user account will be used to run the AnyDesk application?__ Public <br>
+__Q: What is the value data stored in "Userinit" key?__ C:\Windows\system32\userinit[.]exe, cmd[.]exe /c "start /min netsh[.]exe -c" <br>
+__Q: What is the name of the suspicious DLL linked in netshell hive key?__ .\fwshield.dll <br>
+
+### Services and Scheluded Items ###
+another vector of persistance that adversaries really like to use! <br>
+
+`LMVCSS                 Less Murphy Ventures Service Shield              Running Auto      C:\Users\Administrator\AppData\SpcTmp\INITIAL_LANTERN.exe                            2096` GULP! <br>
+
+### Processes and Directories ###
+bc processes are dynamic, they are easy to check for signs of anomalies when adveraries attempt to inject malicious code into them... <br>
+
+``` Get-WmiObject -Class Win32_Process | ForEach-Object {$owner = $_.GetOwner(); [PSCustomObject]@{Name=$_.Name; PID=$_.ProcessId; P_PID=$_.ParentProcessID; User="$($owner.User)"; CommandLine=if ($_.CommandLine.Length -le 60) { $_.CommandLine } else { $_.Commandline.Substring(0, 60) + "..." }; Path=$_.Path}} | ft -AutoSize | tee process-summary.txt ```
+
+``` Get-ChildItem -Path "C:\Users" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { Get-ChildItem -Path "$($_.FullName)\AppData\Local\Temp" -Recurse -Force -ErrorAction SilentlyContinue | Select-Object @{Name='User';Expression={$_.FullName.Split('\')[2]}}, FullName, Name, Extension } | ft -Autosize | tee temp-folders.txt ``` 
+me when there is jmp.exe in the users local temp folder ☠️🫡 <br>
+
+WHAT AN AWESOME ROOM! 😁
