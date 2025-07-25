@@ -41,7 +41,7 @@ x: includes process not attached to a terminal, like backround process. <br>
 to make life easier search for our process, pipe grep search <br>
 
 __ps aux | grep simple__    
-![alt text](..lir.png)
+![img2](images/..lir.png)
 useful process info:
 - user: the user who owns process (root)
 - PID: process ID --> 1961
@@ -58,7 +58,7 @@ __sudo lsof -p 1961__
 look at netcom exe in process now: <br>
 __./netcom__    leave terminal open, new term <br>
 __ps aux | grep netcom__      note that pid of this is later then pid of simple, makes sense. <br>
-![alt text](..lir2.png)
+![img2](images/..lir2.png)
 
 __sudo lsof -P -n__<br>
 lsof --> list open files
@@ -70,7 +70,7 @@ going to use a tool called osquery, good for exploring network and processes.
 __osqueryi__
 this is basically a querying tool in terminal, COOL!<br>
 __SELECT pid,fd,socket,local_adress,remote_address FROM process_open_sockets WHERE pid = 2016;
-![alt text](..lir3.png)
+![img3](images/..lir3.png)
 
 things to take note with processes in linux:
 - a process running from a tmp directory

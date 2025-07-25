@@ -9,4 +9,4 @@ for what the file is displaying (opened it in windows html), it is quite big... 
 
 3. svg files have layers, like an ONION (get shreked)
 looking at the xml of the file, i see the structure of the image, and behind the image of central king building, there is image behind it, in which one of the last layers has the file
-![alt text](think_abt_the_childrenp1.png)
+![spookyahimg](images/think_abt_the_childrenp1.png)

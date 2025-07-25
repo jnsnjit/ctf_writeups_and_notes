@@ -51,4 +51,10 @@ Simple Commands include:
 - QUIT: end POP3 session, applying changes
 
 ### IMAP: Internet Message Access Protocol ###
-need messages to be sync'd on multiple devices? IMAP is your guy! <3 <br>
+need messages to be sync'd on multiple devices? IMAP is your guy! <3. = 143 TCP<br>
+- LOGIN
+- SELECT
+- FETCH
+- MOVE
+- COPY
+- LOGOUT
