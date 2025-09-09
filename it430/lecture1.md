@@ -1,4 +1,4 @@
-## Cybersecurity Basics ##
+# Cybersecurity Basics #
 Security+ Recap! <br>
 
 __CIA Triad:__
