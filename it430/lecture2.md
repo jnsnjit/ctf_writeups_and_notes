@@ -26,3 +26,10 @@ __Search Engines:__ being able to find information out on the web utilizing the 
 
 
 __Network Scanning__ - attackers want to understand a networks topology. we want to know VLAN's, internet connectivity, DMZ, internal networks and the vulnerabilities that come with them. --> NMAP <br>
+
+__Mass Scanning__ - very malicious in most scenarios, but is ideal for network enumeration on a LARGE number of IP's <br>
+
+__TLS-Scan__ - will grab TLS certificates from an IP address provided
+
+__Mitigations for Scanning__
+--> setting up private vlans that stop internal endpoint from scanning other machines that they do need access to. <br>
