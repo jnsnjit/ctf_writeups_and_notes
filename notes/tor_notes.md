@@ -42,7 +42,7 @@ a lot of big black market busts coming from threat intelligence on specific indi
 
 ## Resources Used ##
 https://www.privacyguides.org/en/advanced/tor-overview/#safely-connecting-to-tor
-
+https://snowflake.torproject.org/
 
 
 
