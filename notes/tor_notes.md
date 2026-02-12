@@ -1,6 +1,6 @@
 # Tor Notes #
 
-_Tor_ is a P2P service which is commonely used to surf the deep web, avoid government censorship, and masking/anonymous internet activity. To truly provide privacy from ISP's (Internet Service Providers) and other peering eyes, TOR is usually also used in addition with trusted VPN providers to hide the initial connection to the Tor Network. <br>
+_Tor_ is a decentralized network architecture which is commonely used to surf the deep web, avoid government censorship, and masking/anonymous internet activity. To truly provide privacy from ISP's (Internet Service Providers) and other peering eyes, TOR is usually also used in addition with trusted VPN providers to hide the initial connection to the Tor Network. <br>
 - reason is that TOR traffic is unique looking, so network adminstrators can view and prob be suspicious of it
 - VPN --> privacy (if trusted)
 - Tor --> anonymize traffic
