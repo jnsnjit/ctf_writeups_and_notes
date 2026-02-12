@@ -6,8 +6,8 @@ _Tor_ is a P2P service which is commonely used to surf the deep web, avoid gover
 - Tor --> anonymize traffic
 
 ## How it Works ##
-![tor](tor_traffic.png)
-every time you connect to a website through tor, it will create a circuit to travel from node to node until it reaches the destination
+![tor](tor_traffic.png) <br>
+_every time you connect to a website through tor, it will create a circuit to travel from node to node until it reaches the destination_ <br>
 
 ### Entry Node ###
 The entry node, often called the guard node, is the first node to which your Tor client connects. The entry node is able to see your IP address, however it is unable to see what you are connecting to. Unlike the other nodes, the Tor client will randomly select an entry node and stick with it for two to three months to protect you from certain attacks (cited from resource 1) <br>
