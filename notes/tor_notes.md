@@ -5,6 +5,8 @@ _Tor_ is a decentralized network architecture which is commonely used to surf th
 - VPN --> privacy (if trusted)
 - Tor --> anonymize traffic
 
+similar to a proxy!
+
 ## How it Works ##
 ![tor](tor_traffic.png) <br>
 _every time you connect to a website through tor, it will create a circuit to travel from node to node until it reaches the destination_ <br>
@@ -45,4 +47,6 @@ https://www.privacyguides.org/en/advanced/tor-overview/#safely-connecting-to-tor
 https://snowflake.torproject.org/
 
 
-
+look it pluggable transports, method for masking tor traffic from censorship
+pose the benefits through:
+- low risk, research, examples

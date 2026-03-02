@@ -1,5 +1,5 @@
 # CS351 - Intro to Cybersecurity - Cryptography #
-## Classical Ciphers ##
+# Classical Ciphers #
 __cryptography:__ the science of secret and obscured writing <br>
 two main components:
 1. Encryption: practice of hiding messages so that they can not be read by anyone other then the intended recipient
@@ -121,3 +121,79 @@ __def:__ the same key is used for encryption and decryption <br>
 - key distribution is the biggest hurdle to tackle with symmetric encryption!
 ## Asymmetric Encryption ##
 __def:__ utilization of public and private keys in order to maintain encryption and decryption process. <br>
+
+
+## Stream ##
+__def:__ a stream cipher processes messages bit-by-bit
+
+## Block ##
+__def:__ a block cipher takes block of messages and encrypts then in groups 
+
+# Modern Ciphers #
+
+## Feistel Cipher ##
+Most block ciphers are based on feistel structure:
+- Partition input block into two halfs:   64 --> 32 | 32
+- perform a substitution on left half of data
+- substituition based on round function of right half and subkey
+- then have permutation swapping halfs
+
+the more rounds that you can perform these steps, the better you can achieve a "true random" <br>
+
+Things to consider:
+1. Block size: larger blocks == greater security
+2. Key size: larger key size == greater security
+3. Number of rounds == multiple rounds offer increasing security
+4. Subkey generation algorithm == greater complexity will lead to greater difficulty of cryptanalysis
+5. Fast software encryption/decryption == speed of execution of the algorithm becomes a concern
+
+## DES - Data Encryption Standard ##
+most widely used encryption scheme especially in finanicial applications <br>
+block cipher --> 64 bits in size, 56 in actually key complexity, 8 bits are used for error checking <br>
+
+
+Initial Permutation
+E-Box
+S-Box:
+- taking 48 bit input and reducing into 32 bits. There will 8 sboxes, in which each one will take an input of six bits and return 4 bits
+row1  .. .. .. .. .. .. .. <br>
+row2  .. .. .. .. .. .. .. <br>
+row3  .. .. .. .. .. .. .. <br>
+row4  .. .. .. .. .. .. .. <br>
+
+1110 - 14 <br>
+1100 - 12 <br>
+
+for the exam, know key size, effective key size, structure, ebox and sbox! <br>
+when DES was first proposed, a 56 bit key sound secure, but know it is computationally crackable <br>
+- temp solution, double the key size to 112 bits, and 2^112 complex
+- meet in the middle attack basically negates that idea
+- temp temp soluion --> triple DES / 3DES
+
+## Modes of Operations ##
+1. Electronic Codebook (ECB)
+take p1 plaintext with key --> c1.  if the plaintext is the same, then the output is the same <br>
+
+2. Cipher Block Chaining (CBC)
+take p1 plaintext + IV (initialization vector) + XOR --> +key --> c1 --> acts as IV for p2 <br> 
+now if the plaintext is the same, then the output is different. <br>
+
+3. Cipher Feedback (CFB)
+message is treated as a stream of bits (block cipher acting like stream) <br>
+IV (Shift Register) + # of bits (less then 64 to be considered a stream) to make enough to the encrypt step, then decide how many bits to keep, then shift the register to the left <br>
+
+4. Output Feedback (OFB)
+very similiar to CFB, but instead of feeding c1 to be the shift register of the next bit, you feed the encryption step, but not the cipher at the end, high network speed <br> 
+
+5. Counter Mode (CTR)
+similiar to OFB, but encrypts counter value rather then any feedback value <br>
+now the security is only really tied to the key. counters must also be synced between devices
+
+## AES - American Encryption Standard ##
+RIJNDAL Cipher <br>
+128 bit blocks, with a key size mininum of 128 bits, up to 256bits <br>
+
+review simulation steps in class module <br>
+
+
+
