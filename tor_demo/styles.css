@@ -1,0 +1,42 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.nav{
+    margin-bottom: 2rem;
+    background: linear-gradient(#005b06,#00be00);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding-bottom: 1rem;
+
+}
+
+body{
+    background: #000;
+}
+
+main{
+    font-size: 1rem;
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    color:azure;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+.maintext{
+    font-size: 1rem;
+    font-weight: 600;
+    color:#005b06
+}
+

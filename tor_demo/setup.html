@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My TOR Webpage</title>
+        <!-- Link to the external stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <main>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="setup.html">How to Setup a Tor Site!</a></li>
+                </ul>
+            </div>
+        </header>
+        <body class="main-content">
+            <h1> How to set up a webpage to be accessable through TOR? </h1>
+            <p class="maintext">
+                this setup is for linux server devices! <br>
+                1. install tor <br>
+                - sudo apt install tor <br>
+                2. in the configuration files for tor, make the following modifications <br>
+                HiddenServiceDir /var/lib/tor/your_website_name <br>
+                HiddenServicePort 80 127.0.0.1:80 <br>
+                // can specific the port based of http / https traffic <br>
+                3. once the service is restarted, tor will automatically create <br>
+                the hostname for your website on the dark web! <br> <br>
+
+                for here the setup differs depending on how you have your <br>
+                webpage hosted, but here is how i did it with apache! <br>
+
+                4. in apache, since I ONLY WANT it to display the website on the darkweb <br>
+                make the following modifications to the configuration files. <br>
+                /etc/apache2/sites-enabled/000-default.configuration <br>
+                ServerName "insert onion address"
+                "VirtualHost 127.0.0.1:80" <br>
+
+                by doing the virtualhost 127.0.0.1, it makes it so that apache does not display <br>
+                the webpage if followed by a domain name or ip address, but instead it defaults <br>
+                to the tor setup, with onion address being the only addressable name to find the service! <br>
+
+                HOPE THIS HELPS! stay safe on the dark web 🫡 <br>
+            </p>
+        </body>
+    </main>
+</html>
