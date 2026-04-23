@@ -35,7 +35,7 @@ https://github.com/jalvarezz13/Krb5RoastParser <br>
 ![rockyou](images/rockyou_result.png)
 
 
-4. in order to obtain the following message about the smb stream with the contents on the new galaga game, follow the directions of the cryptic message, which is to take a SHA256 hash of the password, and use it to perform a XOR operation on the ciphertext. this will reveal the final message, giving the flag. this will be two on two files in combination (ideas1 and ideas2), which should net the final message. Note that the XOR operation has to be a revolving XOR, as the sha256 hash of the password is not as long as the message provided.
+5. in order to obtain the following message about the smb stream with the contents on the new galaga game, follow the directions of the cryptic message, which is to take a SHA256 hash of the password, and use it to perform a XOR operation on the ciphertext. this will reveal the final message, giving the flag. this will be two on two files in combination (ideas1 and ideas2), which should net the final message. Note that the XOR operation has to be a revolving XOR, as the sha256 hash of the password is not as long as the message provided.
 
 final message: <br>
 cool! here is my update for you. I still have not developed anything yet, a lot is still in the brainstorming stage. I am not <br>
