@@ -2,7 +2,6 @@
 
 ***20260609JS***
 
----
 Scenario Report:
 Based on the threat intel report received, an infamous hacking group, **IronShade**, has been observed targeting servers across the region. Our team had set up a and exposed weak and ports to get attacked by the group and understand their attack patterns. 
 
@@ -10,7 +9,6 @@ You are provided with one of the compromised servers. Your task as a Security An
 
 ___Keywords:___ honeypot, ssh, footprints, backdoor account
 
----
 
 ## Beginning Analysis ##
 from the initial context, lets get some initial data regarding the machine, and look for the backdoor user.
